@@ -1,0 +1,17 @@
+
+service: ssr
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+
+functions:
+  app:
+    handler: handler.ssr
+    events:
+        - http: ANY /
+        - http: 'ANY {proxy+}'
+
+plugins:
+  - serverless-offline

@@ -1,0 +1,60 @@
+{
+  "name": "ssr-react",
+  "version": "1.0.0",
+  "description": "ssr rendering react using serverless",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "rimraf Browser && node parcel.js",
+    "start": "sls offline start",
+    "deploy":"sls deploy"
+  },
+  "author": "",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              ">1%",
+              "last 3 versions"
+            ]
+          }
+        }
+      ],
+      "stage-2",
+      "latest",
+      "react"
+    ],
+    "plugins": [
+      "syntax-dynamic-import",
+      "transform-class-properties"
+    ]
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "parcel-bundler": "^1.8.1",
+    "rimraf": "^2.6.2",
+    "serverless-offline": "^3.25.4"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "isomorphic-fetch": "^2.2.1",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-router-dom": "^4.2.2",
+    "serverless-http": "^1.5.5"
+  }
+}
