@@ -6,7 +6,7 @@
   "scripts": {
     "bundle": "rimraf Browser && node parcel.js",
     "start": "sls offline start",
-    "deploy":"sls deploy"
+    "deploy": "sls deploy"
   },
   "author": "",
   "license": "ISC",
