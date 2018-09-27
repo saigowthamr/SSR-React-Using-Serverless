@@ -11,7 +11,7 @@ const serverOpt = {
   publicUrl: "./", // The url to server on, defaults to dist
   watch: true,
   cacheDir: ".cache", // The directory cache gets put in, defaults to .cache
-  minify: true, // Minify files, enabled if process.env.NODE_ENV === 'production'
+  minify: false, // Minify files, enabled if process.env.NODE_ENV === 'production'
   target: "node", // browser/node/electron, defaults to browser
   logLevel: 3, // 3 = log everything, 2 = log warnings & errors, 1 = log errors
   sourceMaps: true, // Enable or disable sourcemaps, defaults to enabled (not supported in minified builds yet)
@@ -28,7 +28,7 @@ const browserOpt = {
   publicUrl: "./",
   watch: true,
   cacheDir: ".cache",
-  minify: true,
+  minify: false,
   target: "browser",
   https: false,
   logLevel: 3,
